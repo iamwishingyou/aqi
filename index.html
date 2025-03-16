@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Aqi! 🐾🎀</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styling */
+        body {
+            margin: 0;
+            font-family: 'Comic Neue', cursive;
+            background: linear-gradient(to bottom, #ffccf2, #fff0f5);
+            color: #ff66b2;
+            text-align: center;
+            padding: 20px;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Cute Sparkles Background */
+        body::before {
+            content: '✨';
+            position: absolute;
+            font-size: 2rem;
+            color: #ff99cc;
+            animation: sparkle 3s infinite;
+            top: 10%;
+            left: 5%;
+        }
+
+        body::after {
+            content: '🌸';
+            position: absolute;
+            font-size: 2rem;
+            color: #ffb3d9;
+            animation: sparkle 4s infinite;
+            bottom: 15%;
+            right: 5%;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0.5); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #ff3399;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px #ffe6f2;
+            opacity: 0;
+            transform: translateY(-50px) rotate(-5deg);
+            animation: bounceIn 1.2s ease-in-out forwards;
+        }
+
+        @keyframes bounceIn {
+            0% { opacity: 0; transform: translateY(-50px) rotate(-5deg); }
+            60% { transform: translateY(10px) rotate(5deg); }
+            100% { opacity: 1; transform: translateY(0) rotate(0); }
+        }
+
+        /* Gallery Styling */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 20px;
+            padding: 25px;
+            opacity: 0;
+            animation: fadeInGallery 1.8s ease-in-out forwards;
+        }
+
+        @keyframes fadeInGallery {
+            to { opacity: 1; }
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 3px solid #ff99cc;
+            background: #fff0f5;
+            box-shadow: 0 5px 10px rgba(255, 102, 178, 0.3);
+            transition: transform 0.4s, box-shadow 0.4s;
+            opacity: 0;
+            transform: scale(0.7) rotate(-10deg);
+            animation: popIn 1s ease-in-out forwards;
+        }
+
+        .gallery-item:nth-child(odd) { animation-delay: 0.3s; }
+        .gallery-item:nth-child(even) { animation-delay: 0.6s; }
+
+        @keyframes popIn {
+            to { opacity: 1; transform: scale(1) rotate(0); }
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 10px 20px rgba(255, 102, 178, 0.5);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        /* Message Section */
+        .message {
+            margin-top: 30px;
+            padding: 25px;
+            background: #fff0f5;
+            border: 3px dashed #ff99cc;
+            border-radius: 15px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 5px 15px rgba(255, 102, 178, 0.2);
+            opacity: 0;
+            transform: scale(0.8);
+            animation: popMessage 1.5s ease-in-out forwards;
+            animation-delay: 1.2s;
+        }
+
+        @keyframes popMessage {
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .message p {
+            font-size: 1.4rem;
+            color: #ff66b2;
+            margin: 15px 0;
+            line-height: 1.8;
+            text-shadow: 1px 1px #ffe6f2;
+        }
+
+        .message p span {
+            color: #ff3399;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 40px;
+            font-size: 1rem;
+            color: #ff99cc;
+            text-shadow: 1px 1px #fff0f5;
+            opacity: 0;
+            animation: fadeInFooter 2s ease-in-out forwards;
+            animation-delay: 1.8s;
+        }
+
+        @keyframes fadeInFooter {
+            to { opacity: 1; }
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            .message p { font-size: 1.2rem; }
+            .gallery { grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 1.8rem; }
+            .gallery { grid-template-columns: repeat(2, 1fr); }
+            .message p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday, Aqi! 🎂🐾💕</h1>
+
+    <div class="gallery">
+        <div class="gallery-item"><img src="img/1.jpg" alt="Aqi's Photo 1"></div>
+        <div class="gallery-item"><img src="img/2.jpg" alt="Aqi's Photo 2"></div>
+        <div class="gallery-item"><img src="img/3.jpg" alt="Aqi's Photo 3"></div>
+        <div class="gallery-item"><img src="img/4.jpg" alt="Aqi's Photo 4"></div>
+        <div class="gallery-item"><img src="img/5.jpg" alt="Aqi's Photo 5"></div>
+        <div class="gallery-item"><img src="img/6.jpg" alt="Aqi's Photo 6"></div>
+        <div class="gallery-item"><img src="img/7.jpg" alt="Aqi's Photo 7"></div>
+        <div class="gallery-item"><img src="img/8.jpg" alt="Aqi's Photo 8"></div>
+        <div class="gallery-item"><img src="img/9.jpg" alt="Aqi's Photo 9"></div>
+        <div class="gallery-item"><img src="img/10.jpg" alt="Aqi's Photo 10"></div>
+    </div>
+
+    <div class="message">
+        <p>🌸 <span>Happy Birthday</span>, Aqi! 🎀</p>
+        <p>You’re the sweetest cupcake ever! 🧁💖</p>
+        <p>Wishing you a day full of giggles, hugs, and magic! ✨🐰</p>
+        <p>Love you tons, cutie pie! 🎉🍭</p>
+    </div>
+
+    <div class="footer">
+        Made with 🌈💕 & lots of cuddles for Aqi!
+    </div>
+</body>
+</html>
